@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#dfe6e8" />
+    <meta
+      name="description"
+      content="Explore how a plane cuts a double cone to create circles, ellipses, parabolas, and hyperbolas."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>◒</text></svg>" />
+    <title>Conic Lab — 3D Section Visualizer</title>
+    <script type="module" crossorigin src="/assets/index-DTm7YjfQ.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BImbPu6g.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to visualizer</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Conic Lab home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Conic Lab</span>
+      </a>
+      <p>Plane × cone, made visible</p>
+      <span class="render-label"><i aria-hidden="true"></i> Browser WebGL</span>
+    </header>
+
+    <main id="main" class="workspace">
+      <aside class="controls" aria-labelledby="controls-title">
+        <div class="panel-heading">
+          <p>Define the cutting plane</p>
+          <h1 id="controls-title">Ax + By + Cz + D = 0</h1>
+        </div>
+
+        <form id="plane-form" novalidate>
+          <div class="coefficient-grid">
+            <label for="coefficient-a"><span>A</span><small>x coefficient</small></label>
+            <input id="coefficient-a" name="a" type="number" inputmode="decimal" step="0.1" value="0" autocomplete="off" />
+
+            <label for="coefficient-b"><span>B</span><small>y coefficient</small></label>
+            <input id="coefficient-b" name="b" type="number" inputmode="decimal" step="0.1" value="0" autocomplete="off" />
+
+            <label for="coefficient-c"><span>C</span><small>z coefficient</small></label>
+            <input id="coefficient-c" name="c" type="number" inputmode="decimal" step="0.1" value="1" autocomplete="off" />
+
+            <label for="coefficient-d"><span>D</span><small>plane offset</small></label>
+            <input id="coefficient-d" name="d" type="number" inputmode="decimal" step="0.1" value="-2" autocomplete="off" />
+          </div>
+
+          <p id="form-error" class="form-error" aria-live="polite"></p>
+          <button class="primary-button" type="submit">Update Section</button>
+        </form>
+
+        <section class="presets" aria-labelledby="presets-title">
+          <h2 id="presets-title">Try a Known Section</h2>
+          <div class="preset-list">
+            <button type="button" data-preset="circle">Circle <span>0, 0, 1, −2</span></button>
+            <button type="button" data-preset="ellipse">Ellipse <span>0, .45, 1, −2</span></button>
+            <button type="button" data-preset="parabola">Parabola <span>0, 1, 1, −2</span></button>
+            <button type="button" data-preset="hyperbola">Hyperbola <span>0, 1.7, 1, −1</span></button>
+          </div>
+        </section>
+
+        <p class="input-note">Tip: drag the scene to orbit and scroll to zoom.</p>
+      </aside>
+
+      <section class="visualizer" aria-labelledby="visualizer-title">
+        <div class="stage" id="stage">
+          <div class="stage-topline">
+            <h2 id="visualizer-title">Double-Napped Cone</h2>
+            <p id="render-status" aria-live="polite">Calculating…</p>
+          </div>
+          <div id="scene" class="scene" role="img" aria-label="Interactive 3D model of a plane intersecting a double cone"></div>
+          <div class="legend" aria-label="Visualization legend">
+            <span><i class="cone-key" aria-hidden="true"></i>Cone</span>
+            <span><i class="plane-key" aria-hidden="true"></i>Plane</span>
+            <span><i class="section-key" aria-hidden="true"></i>Section</span>
+          </div>
+        </div>
+
+        <div class="view-controls" aria-label="Camera rotation controls">
+          <label for="horizontal-angle">
+            <span>Horizontal</span>
+            <output id="horizontal-value" for="horizontal-angle">−38°</output>
+            <input id="horizontal-angle" name="horizontal" type="range" min="-180" max="180" value="-38" />
+          </label>
+          <label for="vertical-angle">
+            <span>Vertical</span>
+            <output id="vertical-value" for="vertical-angle">28°</output>
+            <input id="vertical-angle" name="vertical" type="range" min="5" max="85" value="28" />
+          </label>
+        </div>
+      </section>
+
+      <aside class="results" aria-labelledby="results-title">
+        <div class="result-heading">
+          <p>Current section</p>
+          <div>
+            <h2 id="results-title">Circle</h2>
+            <span id="result-symbol" aria-hidden="true">○</span>
+          </div>
+        </div>
+
+        <p id="result-description" class="result-description">A plane perpendicular to the cone axis creates a closed curve with constant radius.</p>
+
+        <dl class="metrics">
+          <div><dt>Eccentricity</dt><dd id="eccentricity">0.000</dd></div>
+          <div><dt>Plane angle</dt><dd id="plane-angle">90.00°</dd></div>
+          <div><dt>Sample points</dt><dd id="point-count">0</dd></div>
+        </dl>
+
+        <section class="reading" aria-labelledby="reading-title">
+          <h3 id="reading-title">What You’re Seeing</h3>
+          <p id="result-reading">The plane crosses one nappe at the same height in every direction.</p>
+        </section>
+
+        <div class="equation-block">
+          <span>Plane equation</span>
+          <p id="plane-equation">z − 2 = 0</p>
+        </div>
+      </aside>
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,1 @@
+# The deployed Python endpoint uses only the standard library.
