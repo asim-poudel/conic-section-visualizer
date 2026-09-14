@@ -1,0 +1,17 @@
+.codex/
+.venv/
+build/
+dist/
+graphify-out/
+__pycache__/
+*.pyc
+*.spec
+*.txt
+AGENTS.md
+camera.py
+config.py
+graphics_engine.py
+main.py
+math_engine.py
+test_conic.py
+ui_manager.py
