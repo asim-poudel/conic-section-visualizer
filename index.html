@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#dfe6e8" />
+    <script>
+      document.documentElement.dataset.theme = new URLSearchParams(location.search).get("theme") || localStorage.getItem("conic-theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
     <meta
       name="description"
       content="Explore how a plane cuts a double cone to create circles, ellipses, parabolas, and hyperbolas."
@@ -25,11 +28,20 @@
         <span>Conic Lab</span>
       </a>
       <p>Plane × cone, made visible</p>
-      <span class="render-label"><i aria-hidden="true"></i> Browser WebGL</span>
+      <div class="header-actions">
+        <nav class="mobile-nav" aria-label="Workspace panels">
+          <button type="button" data-panel-toggle="controls" aria-controls="input-panel" aria-expanded="false">Inputs</button>
+          <button type="button" data-panel-toggle="results" aria-controls="result-panel" aria-expanded="false">Results</button>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <span class="theme-glyph" aria-hidden="true">◐</span>
+          <span class="theme-name">Dark</span>
+        </button>
+      </div>
     </header>
 
     <main id="main" class="workspace">
-      <aside class="controls" aria-labelledby="controls-title">
+      <aside id="input-panel" class="controls" aria-labelledby="controls-title">
         <div class="panel-heading">
           <p>Define the cutting plane</p>
           <h1 id="controls-title">Ax + By + Cz + D = 0</h1>
@@ -64,7 +76,7 @@
           </div>
         </section>
 
-        <p class="input-note">Tip: drag the scene to orbit and scroll to zoom.</p>
+        <p class="input-note">Drag the scene to orbit around the cone.</p>
       </aside>
 
       <section class="visualizer" aria-labelledby="visualizer-title">
@@ -81,21 +93,9 @@
           </div>
         </div>
 
-        <div class="view-controls" aria-label="Camera rotation controls">
-          <label for="horizontal-angle">
-            <span>Horizontal</span>
-            <output id="horizontal-value" for="horizontal-angle">−38°</output>
-            <input id="horizontal-angle" name="horizontal" type="range" min="-180" max="180" value="-38" />
-          </label>
-          <label for="vertical-angle">
-            <span>Vertical</span>
-            <output id="vertical-value" for="vertical-angle">28°</output>
-            <input id="vertical-angle" name="vertical" type="range" min="5" max="85" value="28" />
-          </label>
-        </div>
       </section>
 
-      <aside class="results" aria-labelledby="results-title">
+      <aside id="result-panel" class="results" aria-labelledby="results-title">
         <div class="result-heading">
           <p>Current section</p>
           <div>
@@ -112,9 +112,20 @@
           <div><dt>Sample points</dt><dd id="point-count">0</dd></div>
         </dl>
 
-        <section class="reading" aria-labelledby="reading-title">
-          <h3 id="reading-title">What You’re Seeing</h3>
-          <p id="result-reading">The plane crosses one nappe at the same height in every direction.</p>
+        <section class="eccentricity-guide" aria-labelledby="eccentricity-title">
+          <h3 id="eccentricity-title">Eccentricity</h3>
+          <p class="eccentricity-formula">e = cos &beta; / cos &alpha;</p>
+          <p>&alpha; is the cone half-angle; &beta; is the angle between the plane and the cone axis.</p>
+        </section>
+
+        <section class="conic-guide" aria-labelledby="conic-guide-title">
+          <h3 id="conic-guide-title">Section Guide</h3>
+          <ul>
+            <li><strong>Circle</strong><span>e = 0 &mdash; perpendicular cut</span></li>
+            <li><strong>Ellipse</strong><span>0 &lt; e &lt; 1 &mdash; closed tilted cut</span></li>
+            <li><strong>Parabola</strong><span>e = 1 &mdash; parallel to a generator</span></li>
+            <li><strong>Hyperbola</strong><span>e &gt; 1 &mdash; crosses both nappes</span></li>
+          </ul>
         </section>
 
         <div class="equation-block">
