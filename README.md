@@ -41,4 +41,4 @@ Put the 2 supplied backgrounds in `assets/` with `light` and `dark` in their fil
 
 ## Production
 
-- this project was done as the project part of the coursework COMP342(Computer Graphics) KU DOCSE III
+- This project was done as the project part of the coursework COMP342(Computer Graphics) KU DOCSE-III/II
