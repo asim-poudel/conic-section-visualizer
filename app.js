@@ -52,7 +52,7 @@ scene.add(model);
 const coneMaterial = new THREE.MeshPhysicalMaterial({
   color: 0x31475a,
   transparent: true,
-  opacity: 0.82,
+  opacity: 0.88,
   roughness: 0.35,
   metalness: 0.05,
   side: THREE.DoubleSide,
@@ -61,14 +61,14 @@ const coneMaterial = new THREE.MeshPhysicalMaterial({
 const planeMaterial = new THREE.MeshPhysicalMaterial({
   color: 0x5a6b5c,
   transparent: true,
-  opacity: 0.76,
+  opacity: 0.84,
   roughness: 0.42,
   side: THREE.DoubleSide,
   depthWrite: false,
 });
 const sectionMaterial = new THREE.MeshBasicMaterial({ color: 0xb85d3b });
-const sectionGlowMaterial = new THREE.MeshBasicMaterial({ color: 0xb85d3b, transparent: true, opacity: 0.22, blending: THREE.AdditiveBlending, depthWrite: false });
-const sectionFillMaterial = new THREE.MeshBasicMaterial({ color: 0xb85d3b, transparent: true, opacity: 0.28, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, depthWrite: false });
+const sectionGlowMaterial = new THREE.MeshBasicMaterial({ color: 0xb85d3b, transparent: true, opacity: 0.34, blending: THREE.AdditiveBlending, depthWrite: false });
+const sectionFillMaterial = new THREE.MeshBasicMaterial({ color: 0xb85d3b, transparent: true, opacity: 0.44, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, depthWrite: false });
 
 const upperCone = new THREE.Mesh(new THREE.ConeGeometry(5, 5, 72, 1, true), coneMaterial);
 upperCone.rotation.x = -Math.PI / 2;
@@ -89,13 +89,13 @@ function axisLabel(text, color, position) {
   canvas.width = canvas.height = 48;
   const context = canvas.getContext("2d");
   context.fillStyle = color;
-  context.font = "600 26px IBM Plex Sans";
+  context.font = "600 20px IBM Plex Sans";
   context.textAlign = "center";
   context.textBaseline = "middle";
   context.fillText(text, 24, 24);
   const label = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(canvas), transparent: true, depthTest: false }));
   label.position.set(...position);
-  label.scale.set(0.34, 0.34, 1);
+  label.scale.set(0.28, 0.28, 1);
   model.add(label);
 }
 

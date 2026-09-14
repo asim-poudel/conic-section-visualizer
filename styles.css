@@ -2,21 +2,21 @@
   color-scheme: light;
   font-family: "IBM Plex Sans", sans-serif;
   color: var(--ink);
-  background: #dfe6e8;
+  background: #f3efea;
   font-synthesis: none;
   --ink: #16252d;
   --muted: #607078;
-  --line: #bac7cb;
-  --paper: #f4f7f7;
+  --line: #b8a388;
+  --paper: #f3efea;
   --stage: #243653;
-  --body: #dfe6e8;
+  --body: #f3efea;
   --visualizer-bg: #cbd5d8;
-  --field: #fff;
-  --primary: #16252d;
-  --primary-hover: #27404b;
-  --primary-text: #fff;
+  --field: #ddd6ce;
+  --primary: #b8a388;
+  --primary-hover: #ddd6ce;
+  --primary-text: #16252d;
   --stage-overlay: linear-gradient(135deg, rgba(239, 246, 247, .04), rgba(30, 49, 62, .12));
-  --stage-image: url("/gradient-background.png");
+  --stage-image: url("/assets/blurry-gradient-light.png");
   --cone: #31475a;
   --plane: #5a6b5c;
   --section: #b85d3b;
@@ -26,14 +26,14 @@ html[data-theme="dark"] {
   color-scheme: dark;
   --ink: #e9f0f2;
   --muted: #a5b5bb;
-  --line: #405159;
-  --paper: #172229;
-  --body: #0f171d;
+  --line: #E1DCC9;
+  --paper: #1F150C;
+  --body: #1F150C;
   --visualizer-bg: #111d24;
-  --field: #202d34;
-  --primary: #dce9ec;
-  --primary-hover: #fff;
-  --primary-text: #122027;
+  --field: #412D15;
+  --primary: #E1DCC9;
+  --primary-hover: #412D15;
+  --primary-text: #e9f0f2;
   --stage-overlay: linear-gradient(135deg, rgba(7, 17, 27, .08), rgba(14, 23, 40, .18));
   --cone: #5ba8f5;
   --plane: #7eb893;
@@ -169,8 +169,9 @@ a:focus-visible {
   background: var(--paper);
 }
 
-.controls { border-right: 1px solid var(--line); }
+.controls { border-right: 1px solid var(--line); overflow-y: auto; }
 .results { border-left: 1px solid var(--line); }
+.results { overflow-y: auto; }
 
 .panel-heading p,
 .result-heading > p {
@@ -279,6 +280,7 @@ input[type="number"]:hover { border-color: #5c737b; }
 }
 
 .stage {
+  height: 100%;
   min-height: 0;
   position: relative;
   overflow: hidden;
@@ -333,21 +335,21 @@ input[type="number"]:hover { border-color: #5c737b; }
 
 .result-heading h2 {
   margin: 0;
-  font: 500 clamp(34px, 3vw, 42px)/1 "STIX Two Text", serif;
+  font: 500 clamp(34px, 3vw, 48px)/1 "STIX Two Text", serif;
   text-wrap: balance;
 }
 
 #result-symbol { color: var(--section); font: 500 40px/1 "STIX Two Text", serif; }
 
 .result-description {
-  margin: 16px 0 18px;
+  margin: 24px 0 30px;
   color: var(--ink);
   line-height: 1.65;
   text-wrap: pretty;
 }
 
 .metrics { margin: 0; border-top: 1px solid var(--line); }
-.metrics div { display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.metrics div { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .metrics dt { color: var(--muted); }
 .metrics dd { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
 
@@ -359,12 +361,14 @@ input[type="number"]:hover { border-color: #5c737b; }
 }
 
 .eccentricity-guide h3,
-.conic-guide h3 { margin: 0 0 6px; font-size: 14px; }
-.eccentricity-formula { margin: 0; font: 500 20px/1.35 "STIX Two Text", serif; }
-.eccentricity-guide > p:last-child { margin: 4px 0 0; color: var(--muted); font-size: 12px; line-height: 1.4; }
-.conic-guide ul { display: grid; gap: 5px; margin: 0; padding: 0; list-style: none; }
-.conic-guide li { display: flex; justify-content: space-between; gap: 8px; font-size: 12px; }
-.conic-guide span { color: var(--muted); text-align: right; }
+.conic-guide h3 { margin: 0 0 8px; font-size: 14px; }
+.eccentricity-formula { margin: 0; font: 500 17px/1.4 "STIX Two Text", serif; }
+.eccentricity-guide > p:last-child { margin: 5px 0 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.conic-guide dl { display: grid; gap: 10px; margin: 0; }
+.conic-guide dl div { display: grid; gap: 2px; }
+.conic-guide dt { font-size: 12px; font-weight: 600; }
+.conic-guide dt span { margin-left: 5px; color: var(--section); font-weight: 500; }
+.conic-guide dd { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.4; }
 
 .equation-block {
   margin-top: 30px;
@@ -410,7 +414,7 @@ input[type="number"]:hover { border-color: #5c737b; }
 }
 
 @media (max-height: 680px) {
-  .presets, .input-note { display: none; }
+  .input-note { display: none; }
   .panel-heading p, .result-heading > p { margin-bottom: 4px; }
   .result-description { margin-block: 14px 18px; line-height: 1.45; }
   .metrics div { padding-block: 9px; }

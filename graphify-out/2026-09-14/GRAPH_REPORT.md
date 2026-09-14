@@ -1,17 +1,17 @@
 # Graph Report - Conic Section Visualizer  (2026-09-14)
 
 ## Corpus Check
-- 16 files · ~69,950 words
+- 16 files · ~69,895 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 4 file(s) not represented in the graph (top: (none) 2, .spec 1, .css 1)
 
 ## Summary
-- 191 nodes · 263 edges · 13 communities (10 shown, 3 thin omitted)
+- 194 nodes · 266 edges · 13 communities (11 shown, 2 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 15 edges (avg confidence: 0.92)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5547a113`
+- Built from commit: `21bdd989`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -62,7 +62,7 @@
 - **Conic Mathematics Workflow** — control_guide_plane_equation, readme_real_time_intersection, documentation_parametric_intersection_algorithm, documentation_angle_based_classification, documentation_eccentricity_formulas [INFERRED 0.85]
 - **Interactive Visualization System** — control_guide_camera_controls, readme_interactive_ui, documentation_camera_system, documentation_user_interface, documentation_real_time_updates [INFERRED 0.85]
 
-## Communities (13 total, 3 thin omitted)
+## Communities (13 total, 2 thin omitted)
 
 ### Community 0 - "Conic Visualizer Technical Documentation"
 Cohesion: 0.12
@@ -104,24 +104,28 @@ Nodes (8): _clean(), _format_equation(), handler, Vercel endpoint for cone-plane
 Cohesion: 0.40
 Nodes (4): Answer, Outcome, Q: Understand the complete current architecture before migrating the frontend to JavaScript and retaining Python for the backend, Source Nodes
 
+### Community 12 - "vercel.json"
+Cohesion: 0.33
+Nodes (5): buildCommand, framework, headers, outputDirectory, $schema
+
 ## Knowledge Gaps
-- **48 isolated node(s):** `form`, `submitButton`, `fields`, `stage`, `themeToggle` (+43 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 90 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **51 isolated node(s):** `form`, `submitButton`, `fields`, `stage`, `themeToggle` (+46 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 93 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `UIManager` connect `UIManager` to `GraphicsEngine`, `ConicVisualizer`?**
-  _High betweenness centrality (0.077) - this node is a cross-community bridge._
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
 - **Why does `Camera` connect `Camera` to `GraphicsEngine`, `ConicVisualizer`?**
-  _High betweenness centrality (0.069) - this node is a cross-community bridge._
+  _High betweenness centrality (0.067) - this node is a cross-community bridge._
 - **Why does `GraphicsEngine` connect `GraphicsEngine` to `ConicVisualizer`?**
-  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+  _High betweenness centrality (0.040) - this node is a cross-community bridge._
 - **Are the 4 inferred relationships involving `ConicVisualizer` (e.g. with `Camera` and `GraphicsEngine`) actually correct?**
   _`ConicVisualizer` has 4 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `form`, `submitButton`, `fields` to the rest of the system?**
-  _48 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _51 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Conic Visualizer Technical Documentation` be split into smaller, more focused modules?**
   _Cohesion score 0.11594202898550725 - nodes in this community are weakly interconnected._
 - **Should `Camera` be split into smaller, more focused modules?**

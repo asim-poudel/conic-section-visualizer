@@ -30,7 +30,7 @@ npm run build
 
 Import this repository in Vercel or run `npx vercel`. Vercel builds the Vite frontend and serves `api/conic.py` as a Python Function.
 
-Place the supplied visualizer background at `public/gradient-background.png`. It is intentionally scoped to the 3D stage; the rest of the interface uses a flat neutral background.
+Put the 2 supplied backgrounds in `assets/` with `light` and `dark` in their filenames. The build selects them automatically; `public/gradient-background.png` remains the fallback. Background imagery is scoped to the 3D stage.
 
 ## Structure
 
@@ -38,3 +38,7 @@ Place the supplied visualizer background at `public/gradient-background.png`. It
 - `api/conic.py` — validated cone-plane math and Vercel request handler
 - `test_conic.py` — regression check for all 4 regular conic sections
 - `main.py` and the other root Python modules — original desktop reference; not included in the web runtime
+
+## Production
+
+- this project was done as the project part of the coursework COMP342(Computer Graphics) KU DOCSE III
