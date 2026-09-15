@@ -4,7 +4,7 @@
   "2": "Conic Section Visualizer — Codebase Guide",
   "3": "app.js",
   "4": "handler",
-  "5": "Q: in this codebase, main.py run seperate python app as fronted with badd ui where user can uses sliders to nagivate, zoom i and zom out and supply cone angle adn height, remove unnecessary code and use JS frontend with Python backend; add cone height and slope with testing and update docs",
+  "5": "updateCameraLabels",
   "6": "Dependency Installation",
   "7": "Project Knowledge Graph",
   "8": "Standalone Executable",

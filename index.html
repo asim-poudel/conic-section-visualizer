@@ -43,24 +43,43 @@
     <main id="main" class="workspace">
       <aside id="input-panel" class="controls" aria-labelledby="controls-title">
         <div class="panel-heading">
-          <p>Define the cutting plane</p>
-          <h1 id="controls-title">Ax + By + Cz + D = 0</h1>
+          <p>Shape the model</p>
+          <h1 id="controls-title">Cone &amp; cutting plane</h1>
         </div>
 
         <form id="plane-form" novalidate>
-          <div class="coefficient-grid">
-            <label for="coefficient-a"><span>A</span><small>x coefficient</small></label>
-            <input id="coefficient-a" name="a" type="number" inputmode="decimal" step="0.1" value="0" autocomplete="off" />
+          <fieldset class="parameter-group">
+            <legend>Cone shape</legend>
+            <label class="range-row" for="cone-height">
+              <span>Height</span>
+              <output id="cone-height-value" for="cone-height">5.0</output>
+            </label>
+            <input id="cone-height" name="height" type="range" min="0.5" max="10" step="0.1" value="5" />
 
-            <label for="coefficient-b"><span>B</span><small>y coefficient</small></label>
-            <input id="coefficient-b" name="b" type="number" inputmode="decimal" step="0.1" value="0" autocomplete="off" />
+            <label class="range-row" for="cone-slope">
+              <span>Slope</span>
+              <output id="cone-slope-value" for="cone-slope">1.00</output>
+            </label>
+            <input id="cone-slope" name="slope" type="range" min="0.1" max="3" step="0.05" value="1" />
+            <p class="derived-value">Half-angle <output id="cone-angle-preview">45.0°</output></p>
+          </fieldset>
 
-            <label for="coefficient-c"><span>C</span><small>z coefficient</small></label>
-            <input id="coefficient-c" name="c" type="number" inputmode="decimal" step="0.1" value="1" autocomplete="off" />
+          <fieldset class="parameter-group plane-group">
+            <legend>Cutting plane <span>Ax + By + Cz + D = 0</span></legend>
+            <div class="coefficient-grid">
+              <label for="coefficient-a"><span>A</span><small>x coefficient</small></label>
+              <input id="coefficient-a" name="a" type="number" inputmode="decimal" step="0.1" value="0" autocomplete="off" />
 
-            <label for="coefficient-d"><span>D</span><small>plane offset</small></label>
-            <input id="coefficient-d" name="d" type="number" inputmode="decimal" step="0.1" value="-2" autocomplete="off" />
-          </div>
+              <label for="coefficient-b"><span>B</span><small>y coefficient</small></label>
+              <input id="coefficient-b" name="b" type="number" inputmode="decimal" step="0.1" value="0" autocomplete="off" />
+
+              <label for="coefficient-c"><span>C</span><small>z coefficient</small></label>
+              <input id="coefficient-c" name="c" type="number" inputmode="decimal" step="0.1" value="1" autocomplete="off" />
+
+              <label for="coefficient-d"><span>D</span><small>plane offset</small></label>
+              <input id="coefficient-d" name="d" type="number" inputmode="decimal" step="0.1" value="-2" autocomplete="off" />
+            </div>
+          </fieldset>
 
           <p id="form-error" class="form-error" aria-live="polite"></p>
           <button class="primary-button" type="submit">Update Section</button>
@@ -76,7 +95,7 @@
           </div>
         </section>
 
-        <p class="input-note">Drag the scene to orbit around the cone.</p>
+        <p class="input-note">Drag to orbit, scroll to zoom, or use the view controls.</p>
       </aside>
 
       <section class="visualizer" aria-labelledby="visualizer-title">
@@ -109,6 +128,9 @@
         <dl class="metrics">
           <div><dt>Eccentricity</dt><dd id="eccentricity">0.000</dd></div>
           <div><dt>Plane angle</dt><dd id="plane-angle">90.00°</dd></div>
+          <div><dt>Cone half-angle</dt><dd id="cone-angle">45.00°</dd></div>
+          <div><dt>Cone height</dt><dd id="cone-height-result">5.0</dd></div>
+          <div><dt>Cone slope</dt><dd id="cone-slope-result">1.00</dd></div>
           <div><dt>Sample points</dt><dd id="point-count">0</dd></div>
         </dl>
 

@@ -1,5 +1,86 @@
 {
-  "generated_at": "2026-09-14T04:41:39.896848+00:00",
-  "nodes": {},
+  "generated_at": "2026-09-15T12:06:45.640562+00:00",
+  "nodes": {
+    "camera_camera": {
+      "code_fingerprint": "fd40b07b7562e202e8ac52cb983ea922adeaf84762ed64ff26c33113b5067579",
+      "label": "Camera",
+      "last": "2026-09-14T04:43:23.492294+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T04:43:23.492294+00:00",
+          "outcome": "useful",
+          "q": "Understand the complete current architecture before migrating the frontend to JavaScript and retaining Python for the backend"
+        }
+      ],
+      "score": 0.970233227,
+      "source_file": "camera.py",
+      "status": "tentative",
+      "uses": 1
+    },
+    "graphics_engine_graphicsengine": {
+      "code_fingerprint": "bcc906b13fe9550f0034b18c753af7c60827aab595290a5fb2a721e9cc15dfa4",
+      "label": "GraphicsEngine",
+      "last": "2026-09-14T04:43:23.492294+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T04:43:23.492294+00:00",
+          "outcome": "useful",
+          "q": "Understand the complete current architecture before migrating the frontend to JavaScript and retaining Python for the backend"
+        }
+      ],
+      "score": 0.970233227,
+      "source_file": "graphics_engine.py",
+      "status": "tentative",
+      "uses": 1
+    },
+    "main_conicvisualizer": {
+      "code_fingerprint": "dba26a2f8fdf4437b671b739942e353a6d7435a188dac5dc1f27466041563f2d",
+      "label": "ConicVisualizer",
+      "last": "2026-09-14T04:43:23.492294+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T04:43:23.492294+00:00",
+          "outcome": "useful",
+          "q": "Understand the complete current architecture before migrating the frontend to JavaScript and retaining Python for the backend"
+        }
+      ],
+      "score": 0.970233227,
+      "source_file": "main.py",
+      "status": "tentative",
+      "uses": 1
+    },
+    "math_engine_mathengine": {
+      "code_fingerprint": "7b3033668eaab491267410e34607850076e12c3c992795b2ded0ef2010daea58",
+      "label": "MathEngine",
+      "last": "2026-09-14T04:43:23.492294+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T04:43:23.492294+00:00",
+          "outcome": "useful",
+          "q": "Understand the complete current architecture before migrating the frontend to JavaScript and retaining Python for the backend"
+        }
+      ],
+      "score": 0.970233227,
+      "source_file": "math_engine.py",
+      "status": "tentative",
+      "uses": 1
+    },
+    "ui_manager_uimanager": {
+      "code_fingerprint": "38020440ee7d4634ed4ee61f3016be2b825be6d31ad3442258f12b22062484c9",
+      "label": "UIManager",
+      "last": "2026-09-14T04:43:23.492294+00:00",
+      "provenance": [
+        {
+          "date": "2026-09-14T04:43:23.492294+00:00",
+          "outcome": "useful",
+          "q": "Understand the complete current architecture before migrating the frontend to JavaScript and retaining Python for the backend"
+        }
+      ],
+      "score": 0.970233227,
+      "source_file": "ui_manager.py",
+      "status": "tentative",
+      "uses": 1
+    }
+  },
   "version": 1
 }

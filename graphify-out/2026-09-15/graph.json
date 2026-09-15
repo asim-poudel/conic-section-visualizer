@@ -26,7 +26,7 @@
       "file_type": "code",
       "norm_label": "applytheme()",
       "source_file": "app.js",
-      "source_location": "L188"
+      "source_location": "L193"
     },
     {
       "id": "app_calculate",
@@ -38,7 +38,7 @@
       "file_type": "code",
       "norm_label": "calculate()",
       "source_file": "app.js",
-      "source_location": "L233"
+      "source_location": "L270"
     },
     {
       "id": "app_syncurl",
@@ -50,7 +50,7 @@
       "file_type": "code",
       "norm_label": "syncurl()",
       "source_file": "app.js",
-      "source_location": "L228"
+      "source_location": "L265"
     },
     {
       "id": "app_updatecone",
@@ -62,7 +62,7 @@
       "file_type": "code",
       "norm_label": "updatecone()",
       "source_file": "app.js",
-      "source_location": "L127"
+      "source_location": "L132"
     },
     {
       "id": "app_updateconelabels",
@@ -74,7 +74,7 @@
       "file_type": "code",
       "norm_label": "updateconelabels()",
       "source_file": "app.js",
-      "source_location": "L220"
+      "source_location": "L225"
     },
     {
       "id": "app_updatecurves",
@@ -86,7 +86,7 @@
       "file_type": "code",
       "norm_label": "updatecurves()",
       "source_file": "app.js",
-      "source_location": "L155"
+      "source_location": "L160"
     },
     {
       "id": "app_updateplane",
@@ -98,7 +98,7 @@
       "file_type": "code",
       "norm_label": "updateplane()",
       "source_file": "app.js",
-      "source_location": "L142"
+      "source_location": "L147"
     },
     {
       "id": "app_updateresults",
@@ -110,7 +110,7 @@
       "file_type": "code",
       "norm_label": "updateresults()",
       "source_file": "app.js",
-      "source_location": "L205"
+      "source_location": "L210"
     },
     {
       "id": "app_validate",
@@ -122,7 +122,7 @@
       "file_type": "code",
       "norm_label": "validate()",
       "source_file": "app.js",
-      "source_location": "L119"
+      "source_location": "L124"
     },
     {
       "id": "app_values",
@@ -134,7 +134,7 @@
       "file_type": "code",
       "norm_label": "values()",
       "source_file": "app.js",
-      "source_location": "L115"
+      "source_location": "L120"
     },
     {
       "id": "api_conic_clean",
@@ -254,7 +254,7 @@
       "file_type": "code",
       "norm_label": "render()",
       "source_file": "app.js",
-      "source_location": "L307"
+      "source_location": "L354"
     },
     {
       "id": "app_axislabel",
@@ -266,7 +266,7 @@
       "file_type": "code",
       "norm_label": "axislabel()",
       "source_file": "app.js",
-      "source_location": "L89"
+      "source_location": "L94"
     },
     {
       "id": "app_loadurlstate",
@@ -278,7 +278,7 @@
       "file_type": "code",
       "norm_label": "loadurlstate()",
       "source_file": "app.js",
-      "source_location": "L272"
+      "source_location": "L309"
     },
     {
       "id": "api_conic_handler_do_get",
@@ -315,6 +315,42 @@
       "norm_label": "._send()",
       "source_file": "api/conic.py",
       "source_location": "L128"
+    },
+    {
+      "id": "app_setcamerafromsliders",
+      "label": "setCameraFromSliders()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "updateCameraLabels",
+      "file_type": "code",
+      "norm_label": "setcamerafromsliders()",
+      "source_file": "app.js",
+      "source_location": "L241"
+    },
+    {
+      "id": "app_synccamerasliders",
+      "label": "syncCameraSliders()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "updateCameraLabels",
+      "file_type": "code",
+      "norm_label": "synccamerasliders()",
+      "source_file": "app.js",
+      "source_location": "L256"
+    },
+    {
+      "id": "app_updatecameralabels",
+      "label": "updateCameraLabels()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "updateCameraLabels",
+      "file_type": "code",
+      "norm_label": "updatecameralabels()",
+      "source_file": "app.js",
+      "source_location": "L235"
     },
     {
       "id": "api_conic",
@@ -588,7 +624,7 @@
       "file_type": "code",
       "norm_label": "axes",
       "source_file": "app.js",
-      "source_location": "L86"
+      "source_location": "L91"
     },
     {
       "id": "app_axislabels",
@@ -599,7 +635,7 @@
       "file_type": "code",
       "norm_label": "axislabels",
       "source_file": "app.js",
-      "source_location": "L105"
+      "source_location": "L110"
     },
     {
       "id": "app_camera",
@@ -610,7 +646,18 @@
       "file_type": "code",
       "norm_label": "camera",
       "source_file": "app.js",
-      "source_location": "L36"
+      "source_location": "L41"
+    },
+    {
+      "id": "app_camerafields",
+      "label": "cameraFields",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "app.js",
+      "file_type": "code",
+      "norm_label": "camerafields",
+      "source_file": "app.js",
+      "source_location": "L12"
     },
     {
       "id": "app_conematerial",
@@ -621,7 +668,7 @@
       "file_type": "code",
       "norm_label": "conematerial",
       "source_file": "app.js",
-      "source_location": "L55"
+      "source_location": "L60"
     },
     {
       "id": "app_controls",
@@ -632,7 +679,7 @@
       "file_type": "code",
       "norm_label": "controls",
       "source_file": "app.js",
-      "source_location": "L38"
+      "source_location": "L43"
     },
     {
       "id": "app_curves",
@@ -643,7 +690,7 @@
       "file_type": "code",
       "norm_label": "curves",
       "source_file": "app.js",
-      "source_location": "L112"
+      "source_location": "L117"
     },
     {
       "id": "app_fields",
@@ -676,7 +723,7 @@
       "file_type": "code",
       "norm_label": "grid",
       "source_file": "app.js",
-      "source_location": "L82"
+      "source_location": "L87"
     },
     {
       "id": "app_keylight",
@@ -687,7 +734,7 @@
       "file_type": "code",
       "norm_label": "keylight",
       "source_file": "app.js",
-      "source_location": "L49"
+      "source_location": "L54"
     },
     {
       "id": "app_lowercone",
@@ -698,7 +745,7 @@
       "file_type": "code",
       "norm_label": "lowercone",
       "source_file": "app.js",
-      "source_location": "L78"
+      "source_location": "L83"
     },
     {
       "id": "app_model",
@@ -709,7 +756,7 @@
       "file_type": "code",
       "norm_label": "model",
       "source_file": "app.js",
-      "source_location": "L53"
+      "source_location": "L58"
     },
     {
       "id": "app_planefields",
@@ -731,7 +778,7 @@
       "file_type": "code",
       "norm_label": "planematerial",
       "source_file": "app.js",
-      "source_location": "L64"
+      "source_location": "L69"
     },
     {
       "id": "app_presets",
@@ -742,7 +789,7 @@
       "file_type": "code",
       "norm_label": "presets",
       "source_file": "app.js",
-      "source_location": "L16"
+      "source_location": "L21"
     },
     {
       "id": "app_renderer",
@@ -753,7 +800,7 @@
       "file_type": "code",
       "norm_label": "renderer",
       "source_file": "app.js",
-      "source_location": "L30"
+      "source_location": "L35"
     },
     {
       "id": "app_scene",
@@ -764,7 +811,7 @@
       "file_type": "code",
       "norm_label": "scene",
       "source_file": "app.js",
-      "source_location": "L35"
+      "source_location": "L40"
     },
     {
       "id": "app_sectionfillmaterial",
@@ -775,7 +822,7 @@
       "file_type": "code",
       "norm_label": "sectionfillmaterial",
       "source_file": "app.js",
-      "source_location": "L74"
+      "source_location": "L79"
     },
     {
       "id": "app_sectionglowmaterial",
@@ -786,7 +833,7 @@
       "file_type": "code",
       "norm_label": "sectionglowmaterial",
       "source_file": "app.js",
-      "source_location": "L73"
+      "source_location": "L78"
     },
     {
       "id": "app_sectionmaterial",
@@ -797,7 +844,7 @@
       "file_type": "code",
       "norm_label": "sectionmaterial",
       "source_file": "app.js",
-      "source_location": "L72"
+      "source_location": "L77"
     },
     {
       "id": "app_sectionmeta",
@@ -808,7 +855,7 @@
       "file_type": "code",
       "norm_label": "sectionmeta",
       "source_file": "app.js",
-      "source_location": "L22"
+      "source_location": "L27"
     },
     {
       "id": "app_stage",
@@ -841,7 +888,7 @@
       "file_type": "code",
       "norm_label": "themeimages",
       "source_file": "app.js",
-      "source_location": "L12"
+      "source_location": "L17"
     },
     {
       "id": "app_themetoggle",
@@ -863,7 +910,7 @@
       "file_type": "code",
       "norm_label": "uppercone",
       "source_file": "app.js",
-      "source_location": "L76"
+      "source_location": "L81"
     },
     {
       "id": "basehttprequesthandler",
@@ -875,74 +922,6 @@
       "norm_label": "basehttprequesthandler",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app",
-      "label": "query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Q: in this codebase, main.py run seperate python app as fronted with badd ui where user can uses sliders to nagivate, zoom i and zom out and supply cone angle adn height, remove unnecessary code and use JS frontend with Python backend; add cone height and slope with testing and update docs",
-      "file_type": "document",
-      "frontmatter": {
-        "type": "query",
-        "date": "2026-09-15T12:19:36.078477+00:00",
-        "question": "in this codebase, main.py run seperate python app as fronted with badd ui where user can uses sliders to nagivate, zoom i and zom out and supply cone angle adn height, remove unnecessary code and use JS frontend with Python backend; add cone height and slope with testing and update docs",
-        "contributor": "graphify",
-        "outcome": "useful",
-        "source_nodes": "[&quot;app.js&quot;, &quot;api/conic.py&quot;, &quot;main.py&quot;, &quot;test_conic.py&quot;]"
-      },
-      "node_kind": "page",
-      "norm_label": "query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
-      "source_file": "graphify-out/memory/query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_answer",
-      "label": "Answer",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Q: in this codebase, main.py run seperate python app as fronted with badd ui where user can uses sliders to nagivate, zoom i and zom out and supply cone angle adn height, remove unnecessary code and use JS frontend with Python backend; add cone height and slope with testing and update docs",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "answer",
-      "source_file": "graphify-out/memory/query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
-      "source_location": "L12"
-    },
-    {
-      "id": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_outcome",
-      "label": "Outcome",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Q: in this codebase, main.py run seperate python app as fronted with badd ui where user can uses sliders to nagivate, zoom i and zom out and supply cone angle adn height, remove unnecessary code and use JS frontend with Python backend; add cone height and slope with testing and update docs",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "outcome",
-      "source_file": "graphify-out/memory/query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
-      "source_location": "L16"
-    },
-    {
-      "id": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_q_in_this_codebase_main_py_run_seperate_python_app_as_fronted_with_badd_ui_where_user_can_uses_sliders_to_nagivate_zoom_i_and_zom_out_and_supply_cone_angle_adn_height_remove_unnecessary_code_and_use_js_frontend_with_python_backend_add_cone_height_and_slope_with_testing_and_update_docs",
-      "label": "Q: in this codebase, main.py run seperate python app as fronted with badd ui where user can uses sliders to nagivate, zoom i and zom out and supply cone angle adn height, remove unnecessary code and use JS frontend with Python backend; add cone height and slope with testing and update docs",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Q: in this codebase, main.py run seperate python app as fronted with badd ui where user can uses sliders to nagivate, zoom i and zom out and supply cone angle adn height, remove unnecessary code and use JS frontend with Python backend; add cone height and slope with testing and update docs",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "q: in this codebase, main.py run seperate python app as fronted with badd ui where user can uses sliders to nagivate, zoom i and zom out and supply cone angle adn height, remove unnecessary code and use js frontend with python backend; add cone height and slope with testing and update docs",
-      "source_file": "graphify-out/memory/query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
-      "source_location": "L10"
-    },
-    {
-      "id": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_source_nodes",
-      "label": "Source Nodes",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "Q: in this codebase, main.py run seperate python app as fronted with badd ui where user can uses sliders to nagivate, zoom i and zom out and supply cone angle adn height, remove unnecessary code and use JS frontend with Python backend; add cone height and slope with testing and update docs",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "source nodes",
-      "source_file": "graphify-out/memory/query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
-      "source_location": "L20"
     },
     {
       "id": "package",
@@ -1454,7 +1433,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L202",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
@@ -1466,7 +1445,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L235",
+      "source_location": "L272",
       "weight": 1.0
     },
     {
@@ -1478,7 +1457,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L236",
+      "source_location": "L273",
       "weight": 1.0
     },
     {
@@ -1490,7 +1469,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L256",
+      "source_location": "L293",
       "weight": 1.0
     },
     {
@@ -1502,7 +1481,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L257",
+      "source_location": "L294",
       "weight": 1.0
     },
     {
@@ -1514,7 +1493,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L258",
+      "source_location": "L295",
       "weight": 1.0
     },
     {
@@ -1526,7 +1505,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L259",
+      "source_location": "L296",
       "weight": 1.0
     },
     {
@@ -1538,7 +1517,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L260",
+      "source_location": "L297",
       "weight": 1.0
     },
     {
@@ -1550,7 +1529,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L309",
+      "source_location": "L356",
+      "weight": 1.0
+    },
+    {
+      "source": "app_setcamerafromsliders",
+      "target": "app_updatecameralabels",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.js",
+      "source_location": "L253",
+      "weight": 1.0
+    },
+    {
+      "source": "app_synccamerasliders",
+      "target": "app_updatecameralabels",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "app.js",
+      "source_location": "L262",
       "weight": 1.0
     },
     {
@@ -1562,7 +1565,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L221",
+      "source_location": "L226",
       "weight": 1.0
     },
     {
@@ -1574,7 +1577,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "app.js",
-      "source_location": "L225",
+      "source_location": "L230",
       "weight": 1.0
     },
     {
@@ -1800,17 +1803,6 @@
     },
     {
       "source": "app",
-      "target": "app_axislabels",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L105",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
       "target": "app_themetoggle",
       "relation": "contains",
       "_origin": "ast",
@@ -1822,40 +1814,29 @@
     },
     {
       "source": "app",
+      "target": "app_axislabels",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
       "target": "app_curves",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L112",
+      "source_location": "L117",
       "weight": 1.0
     },
     {
       "source": "app",
-      "target": "app_values",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L115",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
-      "target": "app_validate",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L119",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
-      "target": "app_themeimages",
+      "target": "app_camerafields",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -1866,13 +1847,35 @@
     },
     {
       "source": "app",
+      "target": "app_values",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_validate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
       "target": "app_updatecone",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L127",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -1883,7 +1886,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L142",
+      "source_location": "L147",
       "weight": 1.0
     },
     {
@@ -1894,18 +1897,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L155",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
       "source": "app",
-      "target": "app_presets",
+      "target": "app_themeimages",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -1916,7 +1919,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L188",
+      "source_location": "L193",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_presets",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -1927,18 +1941,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L205",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
       "source": "app",
-      "target": "app_sectionmeta",
+      "target": "app_updatecameralabels",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L22",
+      "source_location": "L235",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_setcamerafromsliders",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L241",
       "weight": 1.0
     },
     {
@@ -1949,7 +1974,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L228",
+      "source_location": "L265",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_sectionmeta",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -1960,7 +1996,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L272",
+      "source_location": "L309",
       "weight": 1.0
     },
     {
@@ -1971,7 +2007,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L30",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -1982,7 +2018,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L307",
+      "source_location": "L354",
       "weight": 1.0
     },
     {
@@ -1993,7 +2029,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L35",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -2004,7 +2040,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L36",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -2015,7 +2051,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L38",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -2026,7 +2062,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L49",
+      "source_location": "L54",
       "weight": 1.0
     },
     {
@@ -2037,18 +2073,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L53",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
-      "target": "app_conematerial",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L55",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -2064,13 +2089,24 @@
     },
     {
       "source": "app",
+      "target": "app_conematerial",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
       "target": "app_planematerial",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L64",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -2092,7 +2128,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L72",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -2103,7 +2139,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L73",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -2114,29 +2150,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L74",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
-      "target": "app_uppercone",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L76",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
-      "target": "app_lowercone",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L78",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -2152,35 +2166,35 @@
     },
     {
       "source": "app",
+      "target": "app_uppercone",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_lowercone",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
       "target": "app_grid",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "app.js",
-      "source_location": "L82",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
-      "target": "app_axes",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L86",
-      "weight": 1.0
-    },
-    {
-      "source": "app",
-      "target": "app_axislabel",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "app.js",
-      "source_location": "L89",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -2192,6 +2206,28 @@
       "confidence_score": 1.0,
       "source_file": "app.js",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_axes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_axislabel",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "app.js",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -2312,50 +2348,6 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "graphify-out/memory/query_20260914_044323_423da0a3_understand_the_complete_current_architecture_befor.md",
-      "source_location": "L20",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app",
-      "target": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_q_in_this_codebase_main_py_run_seperate_python_app_as_fronted_with_badd_ui_where_user_can_uses_sliders_to_nagivate_zoom_i_and_zom_out_and_supply_cone_angle_adn_height_remove_unnecessary_code_and_use_js_frontend_with_python_backend_add_cone_height_and_slope_with_testing_and_update_docs",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/memory/query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_q_in_this_codebase_main_py_run_seperate_python_app_as_fronted_with_badd_ui_where_user_can_uses_sliders_to_nagivate_zoom_i_and_zom_out_and_supply_cone_angle_adn_height_remove_unnecessary_code_and_use_js_frontend_with_python_backend_add_cone_height_and_slope_with_testing_and_update_docs",
-      "target": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_answer",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/memory/query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
-      "source_location": "L12",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_q_in_this_codebase_main_py_run_seperate_python_app_as_fronted_with_badd_ui_where_user_can_uses_sliders_to_nagivate_zoom_i_and_zom_out_and_supply_cone_angle_adn_height_remove_unnecessary_code_and_use_js_frontend_with_python_backend_add_cone_height_and_slope_with_testing_and_update_docs",
-      "target": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_outcome",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/memory/query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
-      "source_location": "L16",
-      "weight": 1.0
-    },
-    {
-      "source": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_q_in_this_codebase_main_py_run_seperate_python_app_as_fronted_with_badd_ui_where_user_can_uses_sliders_to_nagivate_zoom_i_and_zom_out_and_supply_cone_angle_adn_height_remove_unnecessary_code_and_use_js_frontend_with_python_backend_add_cone_height_and_slope_with_testing_and_update_docs",
-      "target": "graphify_out_memory_query_20260915_121936_236eb45b_in_this_codebase_main_py_run_seperate_python_app_source_nodes",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "graphify-out/memory/query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md",
       "source_location": "L20",
       "weight": 1.0
     },
@@ -2643,7 +2635,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L279",
+      "source_location": "L316",
       "weight": 1.0
     },
     {
@@ -2655,7 +2647,19 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "app.js",
-      "source_location": "L281",
+      "source_location": "L318",
+      "weight": 1.0
+    },
+    {
+      "source": "app",
+      "target": "app_synccamerasliders",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "app.js",
+      "source_location": "L337",
       "weight": 1.0
     },
     {

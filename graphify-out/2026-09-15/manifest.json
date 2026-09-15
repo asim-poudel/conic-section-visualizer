@@ -18,9 +18,9 @@
     "semantic_hash": "21ceb6533048be51308e69e7b74a35cf"
   },
   "README.md": {
-    "mtime": 1789481572.0017428,
-    "seen": 1789481592.1662266,
-    "ast_hash": "65766bf2998f68b0d6b201fe6424aae7",
+    "mtime": 1789474460.0907667,
+    "seen": 1789474665.7455776,
+    "ast_hash": "7e3d41d3052fdf447eddcc59f6c856d3",
     "semantic_hash": ""
   },
   "api/conic.py": {
@@ -30,9 +30,9 @@
     "semantic_hash": ""
   },
   "app.js": {
-    "mtime": 1789481563.1807568,
-    "seen": 1789481592.1658394,
-    "ast_hash": "051c63b27586b457ff58e50828780656",
+    "mtime": 1789474633.083721,
+    "seen": 1789474665.7455776,
+    "ast_hash": "2e7ef68fdd87239be267ec41f5ea192e",
     "semantic_hash": ""
   },
   "package.json": {
@@ -66,9 +66,15 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1789481563.1787577,
-    "seen": 1789481592.1662266,
-    "ast_hash": "f1e295145a7f3f0410cb5c055d2400e0",
+    "mtime": 1789474249.1261094,
+    "seen": 1789474665.7455776,
+    "ast_hash": "7e4adc9992f08d0a07b96d97ccbb3d9d",
+    "semantic_hash": ""
+  },
+  "public/gradient-background.png": {
+    "mtime": 1789369135.2790194,
+    "seen": 1789369184.8759258,
+    "ast_hash": "0712123bd5aaf1d02d1ffe497ddfe206",
     "semantic_hash": ""
   },
   "public/assets/blurry-gradient-dark.png": {
@@ -84,15 +90,9 @@
     "semantic_hash": ""
   },
   "codebase_comprehensive_guide.md": {
-    "mtime": 1789481572.00274,
-    "seen": 1789481592.1662266,
-    "ast_hash": "8d61f98d4763f00489639d3b2cf34465",
-    "semantic_hash": ""
-  },
-  "graphify-out/memory/query_20260915_121936_236eb45b_in_this_codebase__main_py_run_seperate_python_app.md": {
-    "mtime": 1789474776.0794737,
-    "seen": 1789481592.1662266,
-    "ast_hash": "65ce8dee11c1f67e1d98f683b8a563c3",
+    "mtime": 1789474513.0583243,
+    "seen": 1789474665.7455776,
+    "ast_hash": "7c3861ff339ecdbc68e17605aac52866",
     "semantic_hash": ""
   }
 }

@@ -5,7 +5,8 @@ import "./styles.css";
 const $ = (selector) => document.querySelector(selector);
 const form = $("#plane-form");
 const submitButton = form.querySelector('[type="submit"]');
-const fields = ["a", "b", "c", "d"].map((name) => form.elements[name]);
+const planeFields = ["a", "b", "c", "d"].map((name) => form.elements[name]);
+const fields = [...planeFields, form.elements.height, form.elements.slope];
 const stage = $("#scene");
 const themeToggle = $("#theme-toggle");
 const themeImages = {
@@ -37,8 +38,10 @@ camera.up.set(0, 0, 1);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.07;
-controls.enableZoom = false;
+controls.enableZoom = true;
 controls.enablePan = false;
+controls.minDistance = 4;
+controls.maxDistance = 40;
 controls.target.set(0, 0, 0);
 camera.position.set(11, -11, 8);
 
@@ -70,19 +73,18 @@ const sectionMaterial = new THREE.MeshBasicMaterial({ color: 0xb85d3b });
 const sectionGlowMaterial = new THREE.MeshBasicMaterial({ color: 0xb85d3b, transparent: true, opacity: 0.34, blending: THREE.AdditiveBlending, depthWrite: false });
 const sectionFillMaterial = new THREE.MeshBasicMaterial({ color: 0xb85d3b, transparent: true, opacity: 0.44, blending: THREE.AdditiveBlending, side: THREE.DoubleSide, depthWrite: false });
 
-const upperCone = new THREE.Mesh(new THREE.ConeGeometry(5, 5, 72, 1, true), coneMaterial);
+const upperCone = new THREE.Mesh(new THREE.ConeGeometry(1, 1, 72, 1, true), coneMaterial);
 upperCone.rotation.x = -Math.PI / 2;
-upperCone.position.z = 2.5;
-const lowerCone = new THREE.Mesh(new THREE.ConeGeometry(5, 5, 72, 1, true), coneMaterial);
+const lowerCone = new THREE.Mesh(new THREE.ConeGeometry(1, 1, 72, 1, true), coneMaterial);
 lowerCone.rotation.x = Math.PI / 2;
-lowerCone.position.z = -2.5;
 model.add(upperCone, lowerCone);
 
-const grid = new THREE.GridHelper(10, 10, 0x718b9a, 0x526a78);
+const grid = new THREE.GridHelper(1, 10, 0x718b9a, 0x526a78);
 grid.rotation.x = Math.PI / 2;
 grid.material.transparent = true;
 grid.material.opacity = 0.18;
-model.add(grid, new THREE.AxesHelper(3.25));
+const axes = new THREE.AxesHelper(1);
+model.add(grid, axes);
 
 function axisLabel(text, color, position) {
   const canvas = document.createElement("canvas");
@@ -97,11 +99,14 @@ function axisLabel(text, color, position) {
   label.position.set(...position);
   label.scale.set(0.28, 0.28, 1);
   model.add(label);
+  return label;
 }
 
-axisLabel("x", "#e56b6f", [3.55, 0, 0]);
-axisLabel("y", "#79b77c", [0, 3.55, 0]);
-axisLabel("z", "#73a9ee", [0, 0, 3.55]);
+const axisLabels = [
+  axisLabel("x", "#e56b6f", [3.55, 0, 0]),
+  axisLabel("y", "#79b77c", [0, 3.55, 0]),
+  axisLabel("z", "#73a9ee", [0, 0, 3.55]),
+];
 
 let planeMesh;
 let curves = [];
@@ -114,13 +119,34 @@ function values() {
 function validate(params) {
   if (Object.values(params).some((value) => !Number.isFinite(value))) return "Enter a number in every coefficient field.";
   if (Math.hypot(params.a, params.b, params.c) < 1e-9) return "A, B, and C cannot all be 0. Change at least one coefficient.";
+  if (params.height < 0.5 || params.height > 20) return "Cone height must be between 0.5 and 20.";
+  if (params.slope < 0.1 || params.slope > 3) return "Cone slope must be between 0.1 and 3.";
   return "";
 }
 
-function updatePlane({ a, b, c, d }) {
-  if (planeMesh) model.remove(planeMesh);
+function updateCone({ height, slope }) {
+  const radius = height * slope;
+  upperCone.scale.set(radius, height, radius);
+  upperCone.position.z = height / 2;
+  lowerCone.scale.set(radius, height, radius);
+  lowerCone.position.z = -height / 2;
+  const extent = Math.max(height, radius);
+  grid.scale.setScalar(extent * 2.2);
+  axes.scale.setScalar(Math.max(3.25, extent * 0.72));
+  const labelDistance = Math.max(3.55, extent * 0.8);
+  axisLabels[0].position.set(labelDistance, 0, 0);
+  axisLabels[1].position.set(0, labelDistance, 0);
+  axisLabels[2].position.set(0, 0, labelDistance);
+}
+
+function updatePlane({ a, b, c, d, height, slope }) {
+  if (planeMesh) {
+    model.remove(planeMesh);
+    planeMesh.geometry.dispose();
+  }
   const normal = new THREE.Vector3(a, b, c).normalize();
-  planeMesh = new THREE.Mesh(new THREE.PlaneGeometry(10, 10), planeMaterial);
+  const size = Math.max(10, height * Math.max(1, slope) * 2.2);
+  planeMesh = new THREE.Mesh(new THREE.PlaneGeometry(size, size), planeMaterial);
   planeMesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 0, 1), normal);
   planeMesh.position.copy(normal).multiplyScalar(-d / Math.hypot(a, b, c));
   model.add(planeMesh);
@@ -183,9 +209,20 @@ function updateResults(result) {
   $("#result-description").textContent = result.description;
   $("#eccentricity").textContent = Number.isFinite(result.eccentricity) ? result.eccentricity.toFixed(3) : "—";
   $("#plane-angle").textContent = `${result.plane_angle.toFixed(2)}°`;
+  $("#cone-angle").textContent = `${result.cone_angle.toFixed(2)}°`;
+  $("#cone-height-result").textContent = result.height.toFixed(1);
+  $("#cone-slope-result").textContent = result.slope.toFixed(2);
   $("#point-count").textContent = new Intl.NumberFormat().format(result.point_count);
   $("#plane-equation").textContent = result.equation;
   $("#render-status").textContent = result.point_count ? "Live geometry" : "Outside visible cone";
+}
+
+function updateConeLabels() {
+  const { height, slope } = values();
+  $("#cone-height-value").textContent = height.toFixed(1);
+  $("#cone-slope-value").textContent = slope.toFixed(2);
+  $("#cone-angle-preview").textContent = `${THREE.MathUtils.radToDeg(Math.atan(slope)).toFixed(1)}°`;
+  updateCone({ height, slope });
 }
 
 function syncUrl(params = values()) {
@@ -216,6 +253,7 @@ async function calculate(event) {
     const result = await response.json();
     if (!response.ok) throw new Error(result.error || "The section could not be calculated.");
     if (currentRequest !== requestId) return;
+    updateCone(result);
     updatePlane(params);
     updateCurves(result.curves);
     updateResults(result);
@@ -239,9 +277,13 @@ function loadUrlState() {
 }
 
 form.addEventListener("submit", calculate);
+for (const name of ["height", "slope"]) {
+  form.elements[name].addEventListener("input", updateConeLabels);
+  form.elements[name].addEventListener("change", calculate);
+}
 document.querySelectorAll("[data-preset]").forEach((button) => {
   button.addEventListener("click", () => {
-    fields.forEach((field, index) => { field.value = presets[button.dataset.preset][index]; });
+    planeFields.forEach((field, index) => { field.value = presets[button.dataset.preset][index]; });
     calculate();
   });
 });
@@ -269,6 +311,7 @@ function render() {
 }
 
 loadUrlState();
+updateConeLabels();
 applyTheme(document.documentElement.dataset.theme);
 calculate();
 render();
